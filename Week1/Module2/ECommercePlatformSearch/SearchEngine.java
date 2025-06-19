@@ -12,6 +12,7 @@ public class SearchEngine {
         if(linearResult==null) System.out.println("Phone not found");
         else System.out.println(linearResult+ " found");
 
+        Arrays.sort(products);
         System.out.println("Binary Search Engine");
         Product binaryResult = SearchAlgorithms.binarySearch(products,"Shoes");
         if(binaryResult==null) System.out.println("Shoes not found");
