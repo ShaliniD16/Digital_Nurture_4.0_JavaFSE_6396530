@@ -1,0 +1,25 @@
+Time Complexity Analysis
+
+Each time the function is called, it performs:
+
+One multiplication (presentValue * (1 + rate))
+One recursive call with years - 1
+So if years = n, the function will be called n times, reducing the value of years by 1 each time, until it reaches the base case (years == 0).
+
+Time Complexity: O(n)
+
+The function performs one operation per year.
+The total number of recursive calls (and therefore operations) grows linearly with the number of years.
+
+
+How to Optimize the Recursive Solution to Avoid Excessive Computation?
+
+Use Memoization (Top-Down Approach)
+Memoization means storing the results of already computed subproblems so we don’t repeat the same work again.
+
+public static double calculateFutureValueMemo(double presentValue, double growthRate, int years, double[] table){
+        if(years==0) return presentValue;
+        if(table[years]!=0) return table[years];
+        table[years] = calculateFutureValueMemo(presentValue*(1+growthRate),growthRate,years-1,table);
+        return table[years];
+}
