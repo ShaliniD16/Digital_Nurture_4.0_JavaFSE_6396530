@@ -1,9 +1,0 @@
-Recursion is a programming concept where a function calls itself to solve smaller versions of the same problem. Instead of writing long, repetitive code, recursion allows us to write cleaner and simpler solutions — especially for problems that have a repeating pattern.
-
-How Does It Simplify Problems?
-  
-Recursion is helpful when:
-
-The problem can be broken into smaller subproblems of the same type
-The solution involves repeated patterns, like tree traversal, factorial, Fibonacci series, or searching through nested data structures
-Instead of using complex loops or manually tracking steps, recursion lets us solve the problem in a more intuitive and mathematically structured way.
