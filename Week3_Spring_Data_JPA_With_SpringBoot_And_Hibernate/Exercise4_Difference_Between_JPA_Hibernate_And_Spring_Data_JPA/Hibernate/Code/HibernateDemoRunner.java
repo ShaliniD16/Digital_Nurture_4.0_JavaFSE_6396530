@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 public class HibernateDemoRunner {
 
     private static final SessionFactory sessionFactory =
-            new Configuration().configure()       // loads hibernate.cfg.xml
+            new Configuration().configure()      
                     .buildSessionFactory();
 
     public static void main(String[] args) {
