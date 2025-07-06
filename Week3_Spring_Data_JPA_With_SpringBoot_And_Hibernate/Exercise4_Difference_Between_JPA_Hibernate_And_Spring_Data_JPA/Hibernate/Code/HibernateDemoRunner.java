@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 public class HibernateDemoRunner {
 
     private static final SessionFactory sessionFactory =
-            new Configuration().configure()      
+            new Configuration().configure()       // loads hibernate.cfg.xml
                     .buildSessionFactory();
 
     public static void main(String[] args) {
@@ -16,10 +16,10 @@ public class HibernateDemoRunner {
         Employee e = getEmployee(id);
         updateEmail(id, "alice@updated.com");
         deleteEmployee(id);
-        sessionFactory.close();                  
+        sessionFactory.close();                  // clean shutdown
     }
 
-  
+    /* --------------- CRUD helpers ---------------- */
 
     private static Integer createEmployee(String fn, String ln, String email) {
         Session s = sessionFactory.openSession();
