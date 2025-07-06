@@ -16,10 +16,10 @@ public class HibernateDemoRunner {
         Employee e = getEmployee(id);
         updateEmail(id, "alice@updated.com");
         deleteEmployee(id);
-        sessionFactory.close();                  // clean shutdown
+        sessionFactory.close();             
     }
 
-    /* --------------- CRUD helpers ---------------- */
+    
 
     private static Integer createEmployee(String fn, String ln, String email) {
         Session s = sessionFactory.openSession();
