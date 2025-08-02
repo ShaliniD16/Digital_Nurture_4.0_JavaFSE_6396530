@@ -16,11 +16,11 @@ function App() {
   };
 
   const sayHello = () => {
-    alert("Hello!");
+    console.log("Hello!");
   };
 
   const showStaticMessage = () => {
-    alert("Static message: Value incremented!");
+    console.log("Static message: Value incremented!");
   };
 
   const sayWelcome = (msg) => {
